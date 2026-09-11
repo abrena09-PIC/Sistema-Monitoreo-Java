@@ -78,15 +78,24 @@ el constructo reecibe id y capacidadMaxima, el nivel arranca en 0 y el estado en
 para que ningún tanque empiece con datos raros.
 
 Métodos propuestos:
-- + getId() - String
-- + getCapacidadMaxima() - double
-- + getNivelActual() - double
-- + getEstado() - EstadoTanque
-- + llenar(double cantidad) - sube el nivel sin pasar el limite max y deja el estado en LLENANDO
-- + vaciar(double cantidad) - baja el nivel sin llegar a menos de cero, deja el estado en VACIANDO
-- + detener() - deja el estado en DETENIDO, no afecta al nivel
-- + calcularPorcentaje() - double(nivelActual / capacidadMaxima) * 100
-- + mostrarInformacion() - imprime las Var. del tanque
+
+*getId() - String
+
+*getCapacidadMaxima() - double
+
+*getNivelActual() - double
+
+*getEstado() - EstadoTanque
+
+*llenar(double cantidad) - sube el nivel sin pasar el limite max y deja el estado en LLENANDO
+
+*vaciar(double cantidad) - baja el nivel sin llegar a menos de cero, deja el estado en VACIANDO
+
+*detener() - deja el estado en DETENIDO, no afecta al nivel
+
+*calcularPorcentaje() - double(nivelActual / capacidadMaxima) * 100
+
+*mostrarInformacion() - imprime las Var. del tanque
 
 Responsabilidad - cuidar su propio nivel y sus propios estado.
 
