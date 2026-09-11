@@ -3,9 +3,9 @@
 
 Integrantes:
 
-Axel Iván Breña Torres (Estudiante A)
+Axel Breña (Estudiante A)
 
-Axel Iván Breña Torres (x2) (Estudiante B)
+Iván Torres (x2) (Estudiante B)
 
 
 
