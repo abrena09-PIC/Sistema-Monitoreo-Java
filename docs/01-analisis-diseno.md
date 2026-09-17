@@ -11,7 +11,7 @@ Iván Torres (x2) (Estudiante B)
 
 
 
-# 1. Descripción 
+# Descripción 
 
 El problema nos habla de una planta con varios tanques para almacenar liquidos, los tanques tiene
 una capacidad limite que no puede superarse y un nivel cambia si el tanque se va llenando o vaciando 
@@ -28,7 +28,7 @@ al sensor que haga una lectura
 
 ---
 
-## 2. Identificación de objetos
+## Identificación de objetos
 
 Considero que el tanque es el elemento principal ya que cuenta con un identificador, una capacidad, un nivel y un estado que cambia a lo largo
 del tiempo, por lo tanto debe de ser un objeto
@@ -41,16 +41,16 @@ lecturas fuera de rango, si usamos esa lógica la clase terminaría haciendo cos
 
 ---
 
-## 3. Estado y comportamiento
+##  Estado y comportamiento
 
-| Objeto | Responsabilidad                                                                 | Información que debe guardar                                                            | Comportamientos                                                                                                                                                                               |
-|---|---------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Tanque** | Mantener su nivel dentro de los límites             | *Tag<br/>*Capacidad<br/>*Nivel<br/>*Acción actual                                       | *consulta la información<br/>*Permite llenarse sin pasar la capacidad máxima<br/> *Permitir vaciarse sin bajar de cero <br/>*Permitir detenerse<br/>*Permite calcular su porcentaje de liquido |
-| **SensorNivel** | Obtener una lectura del tanque al que está asociado | *Su tag <br/>*el tanque asociado<br/>*el rango válido<br/> *la última lectura| Permitir realizar una lectura<br/>* Permitir consultar la última lectura<br/>* Permitir saber si esa lectura esta en rango                                                                    |
+| Objeto          | Responsabilidad                                     | Información que debe guardar                                                           | Comportamientos                                                                                                                                                                                |
+|-----------------|-----------------------------------------------------|----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Tanque**      | Mantener su nivel dentro de los límites             | *Tag<br/>*Capacidad<br/>*Nivel<br/>*Acción actual                                      | *consulta la información<br/>*Permite llenarse sin pasar la capacidad máxima<br/> *Permitir vaciarse sin bajar de cero <br/>*Permitir detenerse<br/>*Permite calcular su porcentaje de liquido |
+| **SensorNivel** | Obtener una lectura del tanque al que está asociado | *Su tag <br/>*el tanque asociado<br/>*el rango válido<br/> *la última lectura|  Permitir realizar una lectura<br/>* Permitir consultar la última lectura<br/>* Permitir saber si esa lectura esta en rango                                                                    |
 
 ---
 
-## 4. Relaciones entre los objetos
+## Relaciones entre los objetos
 
 El sensor necesita saber a qué tanque se asoció porque tiene que acceder al tanque para saber cual su nivel en ese momento
 
@@ -99,15 +99,15 @@ Métodos propuestos:
 
 Responsabilidad - cuidar su propio nivel y sus propios estado.
 
-### Clase `SensorNivel`
+### Clase SensorNivel
 
-| Atributo       | Tipo de dato | Visibilidad |
-|----------------|---|---|
-| id             | String | private |
-| tanqueAsociado | Tanque | private |
-| valorMinV      | double | private |
-| valorMaxV      | double | private |
-| ultimaLectura  | double | private |
+| Atributo       | Tipo de dato      | Visibilidad  |
+|----------------|-------------------|--------------|
+| id             | String            | private      |
+| tanqueAsociado | Tanque            | private      |
+| valorMinV      | double            | private      |
+| valorMaxV      | double            | private      |
+| ultimaLectura  | double            | private      |
 
 Constructor: recibe id del tanque asociado y el rango válido
 
@@ -136,13 +136,13 @@ Los métodos get...()sí son públicos porque otras clases necesitan consultar e
 
 ---
 
-## 6. Diagrama UML 
+## Diagrama UML 
 
 
 
 ---
 
-## 7. Justificación del diseño
+## Justificación del diseño
 
 1. ¿Por qué propusieron esas clases? son las dos partes del problema con estado y comportamiento propios, lo demás está a nivel de software
 2. ¿Cuál es la responsabilidad principal de cada clase? Tanque cuida su nivel y su estado y SensorNivel toma y valida lecturas.
